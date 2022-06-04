@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mallcco.poketindernew">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.mallcco.poketindernew.PokeTinderNewApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PokeTinderNew">
+        <activity
+            android:name="com.mallcco.poketindernew.ui.view.MyPokemonsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mallcco.poketindernew.ui.view.PokemonDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mallcco.poketindernew.PokeTinderNewApp"
+            android:exported="false" />
+        <activity
+            android:name="com.mallcco.poketindernew.ui.view.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mallcco.poketindernew.ui.view.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mallcco.poketindernew.ui.view.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mallcco.poketindernew.ui.view.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mallcco.poketindernew.ui.view.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

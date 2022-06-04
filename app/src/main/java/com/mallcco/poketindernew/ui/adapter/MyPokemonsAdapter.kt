@@ -1,0 +1,28 @@
+package com.mallcco.poketindernew.ui.adapter
+
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.mallcco.poketindernew.R
+
+import com.mallcco.poketindernew.domain.model.MyPokemon
+import com.mallcco.poketindernew.ui.holder.MyPokemonsHolder
+import com.mallcco.poketindernew.util.inflate
+
+
+
+class MyPokemonsAdapter(val list: List<MyPokemon>) :
+    RecyclerView.Adapter<MyPokemonsHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyPokemonsHolder {
+        val view = parent.inflate(R.layout.item_pokemon_saved)
+        return MyPokemonsHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: MyPokemonsHolder, position: Int) {
+        val item = list[position]
+        holder.bind(item)
+    }
+
+    override fun getItemCount(): Int = list.size
+
+}
